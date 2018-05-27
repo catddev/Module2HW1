@@ -3,7 +3,7 @@
 #include<locale.h>
 #include<math.h>
 
-int f(int x, int y) {
+int f2(int x, int y) {
 
 	if (x == 0 && y == 0) {
 		return 0;
@@ -18,12 +18,38 @@ int f(int x, int y) {
 		return 144 / (x*y);
 	}
 }
-int f1(int x, int y) {
+int f3(int x, int y) {
 	if (x > y) {
 		return x - y;
 	}
 	else {
 		return y - x;
+	}
+}
+double f4(double x, double y) {
+	if (x > y) {
+		return x / y;
+	}
+	else {
+		return y / x;
+	}
+}
+double f5(double x, double y, double z) {
+
+	double m, n1, k;
+	scanf("%f %f %f", &x, &y, &z);
+
+	if (x < y && x < z) {
+		x = k, y = m, z = n1;
+		return (m*n1 / k);
+	}
+	else if (y < x && y < z) {
+		y = k, x = m, z = n1;
+		return (m*n1 / k);
+	}
+	else if (z < x && z < y) {
+		z = k, x = m, y = n1;
+		return (m*n1 / k);
 	}
 }
 
@@ -67,24 +93,29 @@ void main()
 		/* 2. Напишите функцию int f(int x, int y), которая возвращает 0, если значения x и y оба равны нулю, 12/x, если y равен 0, 12/y,
 		если x равен 0, иначе 144/(x*y). */
 
-		printf("%d\n", f(0, 0));
-		printf("%d\n", f(6, 0));
-		printf("%d\n", f(0, 3));
-		printf("%d\n", f(12, 12));
+		printf("%d\n", f2(0, 0));
+		printf("%d\n", f2(6, 0));
+		printf("%d\n", f2(0, 3));
+		printf("%d\n", f2(12, 12));
 	}
 	else if (n == 3) {
 		/* 3. Напишите функцию int f(int x, int y), которая возвращает x-y, если x больше y, иначе возвращает y-x */
 
-		printf("%d\n", f1(5, 3));
-		printf("%d\n", f1(7, 12));
+		printf("%d\n", f3(5, 3));
+		printf("%d\n", f3(7, 12));
 	}
 	else if (n == 4) {
 		/* 4. Напишите функцию double f(double x, double y), которая возвращает x/y, если x больше y, иначе возвращает y/x.
 		Предполагается, что значения параметров больше нуля. */
+
+		printf("%f\n", f4(3,2));
+		printf("%f\n", f4(2,7));
 	}
 	else if (n == 5) {
 		/* 5. Напишите функцию double f(double x, double y, double z), которая возвращает m*n/k,
 		где k есть меньшее из чисел x, y, z, а m и n есть среднее и большее из этих чисел. Предполагается, что значения параметров больше нуля */
+
+		printf("%f\n", f5(2,7,8));
 	}
 	else if (n == 6) {
 		/* 6. Напишите функцию int f(int a, int b, int c), которая возвращает наименьшее из значений a, b, c. */
