@@ -24,14 +24,19 @@ void main()
 		printf("d=");
 		scanf("%d", &d);
 
+		q = a / d;
+
 		if (a>d) {
-			q = a / d;
 			r = (a%d);
 			printf("частное: %d \nостаток при делении: %d\n", q, r);
 		}
 		else if (a<d) {
-
-			printf("частное: %d \nостаток при делении: %f\n", q, r);
+			q = 0;
+			float a1, d1, r1;
+			a1 = a;
+			d1 = d;
+			r1= a1 / d1;
+			printf("частное: %d \nостаток при делении: %f\n", q, r1);
 		}
 	}
 
