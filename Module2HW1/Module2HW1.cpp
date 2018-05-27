@@ -37,20 +37,17 @@ double f4(double x, double y) {
 double f5(double x, double y, double z) {
 
 	double m, n1, k;
-	scanf("%f %f %f", &x, &y, &z);
 
 	if (x < y && x < z) {
-		x = k, y = m, z = n1;
-		return (m*n1 / k);
+		k = x, m = y, n1 = z;
 	}
 	else if (y < x && y < z) {
-		y = k, x = m, z = n1;
-		return (m*n1 / k);
+		k = y, m = x, n1 = z;
 	}
 	else if (z < x && z < y) {
-		z = k, x = m, y = n1;
-		return (m*n1 / k);
+		k = z, m = x, n1 = y;
 	}
+	return (m*n1 / k);
 }
 
 
@@ -115,7 +112,7 @@ void main()
 		/* 5. Напишите функцию double f(double x, double y, double z), которая возвращает m*n/k,
 		где k есть меньшее из чисел x, y, z, а m и n есть среднее и большее из этих чисел. Предполагается, что значения параметров больше нуля */
 
-		printf("%f\n", f5(2,7,8));
+		printf("%f\n", f5(7,3,5));
 	}
 	else if (n == 6) {
 		/* 6. Напишите функцию int f(int a, int b, int c), которая возвращает наименьшее из значений a, b, c. */
