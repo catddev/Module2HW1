@@ -26,7 +26,7 @@ void main()
 
 		q = a / d;
 
-		if (a>d) {
+		if (a>=d) {
 			r = (a%d);
 			printf("частное: %d \nостаток при делении: %d\n", q, r);
 		}
