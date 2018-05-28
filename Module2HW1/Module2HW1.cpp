@@ -78,16 +78,16 @@ void main()
 		/* 4. Напишите функцию double f(double x, double y), которая возвращает x/y, если x больше y, иначе возвращает y/x.
 		Предполагается, что значения параметров больше нуля. */
 		
-		double x, y, F;
+		double x, y, p;
 		scanf("%f %f", &x, &y);
 
 		if (x > y) {
-			F = x / y;
+			p = x / y;
 		}
 		else {
-			F = y / x;
+			p = y / x;
 		}
-		printf("%f\n", F);
+		printf("%f\n", p);
 	}
 	else if (n == 5) {
 		/* 5. Напишите функцию double f(double x, double y, double z), которая возвращает m*n/k,
