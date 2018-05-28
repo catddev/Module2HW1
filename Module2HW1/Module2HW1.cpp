@@ -78,16 +78,16 @@ void main()
 		/* 4. Напишите функцию double f(double x, double y), которая возвращает x/y, если x больше y, иначе возвращает y/x.
 		Предполагается, что значения параметров больше нуля. */
 		
-		double x, y, f;
+		double x, y, F;
 		scanf("%f %f", &x, &y);
 
 		if (x > y) {
-			f = x / y;
+			F = x / y;
 		}
 		else {
-			f = y / x;
+			F = y / x;
 		}
-		printf("%f\n", f);
+		printf("%f\n", F);
 	}
 	else if (n == 5) {
 		/* 5. Напишите функцию double f(double x, double y, double z), которая возвращает m*n/k,
@@ -111,32 +111,79 @@ void main()
 	else if (n == 6) {
 		/* 6. Напишите функцию int f(int a, int b, int c), которая возвращает наименьшее из значений a, b, c. */
 
-		int a1, b, c, f;
-		if (a1 < b && a1 < c) {
-			f = a1;
+		int a, b, c, f;
+		scanf("%d %d %d", &a, &b, &c);
+		if (a < b && a < c) {
+			f = a;
 		}
-		else if (b < a1 && b < c) {
+		else if (b < a && b < c) {
 			f = b;
 		}
-		else if (c < a1 && c < b) {
+		else if (c < a && c < b) {
 			f = c;
 		}
 		printf("наименьшее значение из трех чисел: %d\n", f);
 	}
 	else if (n == 7) {
 		/* 7. Напишите функцию int f(int a, int b, int c), которая возвращает наибольшее из значений a, b, c. */
+
+		int a, b, c, f;
+		scanf("%d %d %d", &a, &b, &c);
+		if (a > b && a > c) {
+			f = a;
+		}
+		else if (b > a && b > c) {
+			f = b;
+		}
+		else if (c > a && c > b) {
+			f = c;
+		}
+		printf("наибольшее значение из трех чисел: %d\n", f);
 	}
 	else if (n == 8) {
-		/* 8. Напишите функцию bool f(int x, int y, int z), которая возвращает true, если х2+у2= z2, иначе возвращает false. */
+		/* 8. Напишите функцию bool f(int x, int y, int z), которая возвращает true, если х^2+у^2= z^2, иначе возвращает false. */
+
+		int x, y, z;
+		scanf("%d %d %d", &x, &y, &z);
+		if (x*x + y*y == z*z) {
+			printf("true\n");
+		}
+		else {
+			printf("false\n");
+		}
 	}
 	else if (n == 9) {
 		/* 9. Напишите функцию bool f(int x, int y), которая возвращает true, если x делится нацело на y, или наоборот,
 		y делится нацело на x, иначе возвращает false. Предполагается, что значения параметров больше нуля. */
+
+		int x, y;
+		scanf("%d %d", &x, &y);
+		if (x%y == 0 || y%x == 0) {
+			printf("true\n");
+		}
+		else {
+			printf("false\n");
+		}
 	}
 	else if (n == 10) {
 		/* 10. Положительные числа x, y, z могут быть сторонами треугольника, если большее из них меньше суммы двух других.
 		Напишите функцию bool f(int x, int y, int z), которая возвращает true, если числа x, y, z могут быть сторонами треугольника,
 		иначе возвращает false. Предполагается, что значения параметров больше нуля */
+
+		int x, y, z;
+		scanf("%d %d %d", &x, &y, &z);
+		if (x>y && x>z && x<(y+z)) {
+			printf("true\n");
+		}
+		else if (y>x && y>z && y<(x + z)) {
+			printf("true\n");
+		}
+		else if (z>x && z>y && z<(x + y)) {
+			printf("true\n");
+		}
+		else {
+			printf("false\n");
+		}
 	}
 	else {
 		printf("нет заданий\n");
