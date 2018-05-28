@@ -1,54 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
-#include<math.h>
-
-int f2(int x, int y) {
-
-	if (x == 0 && y == 0) {
-		return 0;
-	}
-	else if (y == 0) {
-		return 12 / x;
-	}
-	else if (x == 0) {
-		return 12 / y;
-	}
-	else {
-		return 144 / (x*y);
-	}
-}
-int f3(int x, int y) {
-	if (x > y) {
-		return x - y;
-	}
-	else {
-		return y - x;
-	}
-}
-double f4(double x, double y) {
-	if (x > y) {
-		return x / y;
-	}
-	else {
-		return y / x;
-	}
-}
-double f5(double x, double y, double z) {
-
-	double m, n1, k;
-
-	if (x < y && x < z) {
-		k = x, m = y, n1 = z;
-	}
-	else if (y < x && y < z) {
-		k = y, m = x, n1 = z;
-	}
-	else if (z < x && z < y) {
-		k = z, m = x, n1 = y;
-	}
-	return (m*n1 / k);
-}
 
 
 void main()
@@ -94,45 +46,82 @@ void main()
 		scanf("%d %d", &x, &y);
 		
 		if (x == 0 && y == 0) {
-			f= 0;
+			f = 0;
 		}
 		else if (y == 0) {
-			f= 12 / x;
+			f = 12 / x;
 		}
 		else if (x == 0) {
-			f= 12 / y;
+			f = 12 / y;
 		}
 		else {
 			f = 144 / (x*y);
 		}
 		printf("%d\n", f);
-
-		/*int x, y;
-		scanf("%d %d", &x, &y);
-		printf("%d\n", f2(x, y));*/
 		
 	}
 	else if (n == 3) {
 		/* 3. Напишите функцию int f(int x, int y), которая возвращает x-y, если x больше y, иначе возвращает y-x */
 
-		printf("%d\n", f3(5, 3));
-		printf("%d\n", f3(7, 12));
+		int x, y, f;
+		scanf("%d %d", &x, &y);
+
+		if (x > y) {
+			f = x - y;
+		}
+		else {
+			f = y - x;
+		}
+		printf("%d\n", f);
 	}
 	else if (n == 4) {
 		/* 4. Напишите функцию double f(double x, double y), которая возвращает x/y, если x больше y, иначе возвращает y/x.
 		Предполагается, что значения параметров больше нуля. */
+		
+		double x, y, f;
+		scanf("%f %f", &x, &y);
 
-		printf("%f\n", f4(3,2));
-		printf("%f\n", f4(2,7));
+		if (x > y) {
+			f = x / y;
+		}
+		else {
+			f = y / x;
+		}
+		printf("%f\n", f);
 	}
 	else if (n == 5) {
 		/* 5. Напишите функцию double f(double x, double y, double z), которая возвращает m*n/k,
 		где k есть меньшее из чисел x, y, z, а m и n есть среднее и большее из этих чисел. Предполагается, что значения параметров больше нуля */
 
-		printf("%f\n", f5(7,3,5));
+		double x, y, z, m, n1, k, f;
+		scanf("%f %f %f", &x, &y, &z);
+
+		if (x < y && x < z) {
+			k = x, m = y, n1 = z;
+		}
+		else if (y < x && y < z) {
+			k = y, m = x, n1 = z;
+		}
+		else if (z < x && z < y) {
+			k = z, m = x, n1 = y;
+		}
+		f = m*n1 / k;
+		printf("%f\n", f);
 	}
 	else if (n == 6) {
 		/* 6. Напишите функцию int f(int a, int b, int c), которая возвращает наименьшее из значений a, b, c. */
+
+		int a1, b, c, f;
+		if (a1 < b && a1 < c) {
+			f = a1;
+		}
+		else if (b < a1 && b < c) {
+			f = b;
+		}
+		else if (c < a1 && c < b) {
+			f = c;
+		}
+		printf("наименьшее значение из трех чисел: %d\n", f);
 	}
 	else if (n == 7) {
 		/* 7. Напишите функцию int f(int a, int b, int c), которая возвращает наибольшее из значений a, b, c. */
