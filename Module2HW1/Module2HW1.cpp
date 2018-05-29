@@ -17,7 +17,7 @@ void main()
 		/* 1. Дано натуральное (целое неотрицательное) число, а и целое положительное число d.
 		Вычислить частное q и остаток r при делении, а на d. */
 
-		int a, d, q, r;
+		unsigned int a, d, q, r;
 		printf("a=");
 		scanf("%d", &a);
 		printf("d=");
@@ -44,7 +44,10 @@ void main()
 		если x равен 0, иначе 144/(x*y). */
 
 		int x, y, f;
-		scanf("%d %d", &x, &y);
+		printf("x=");
+		scanf("%d", &x);
+		printf("y=");
+		scanf("%d", &y);
 		
 		if (x == 0 && y == 0) {
 			f = 0;
@@ -66,7 +69,10 @@ void main()
 		/* 3. Напишите функцию int f(int x, int y), которая возвращает x-y, если x больше y, иначе возвращает y-x */
 
 		int x, y, f;
-		scanf("%d %d", &x, &y);
+		printf("x=");
+		scanf("%d", &x);
+		printf("y=");
+		scanf("%d", &y);
 
 		if (x > y) {
 			f = x - y;
@@ -82,7 +88,10 @@ void main()
 		Предполагается, что значения параметров больше нуля. */
 		
 		double x, y, f;
-		scanf("%lf %lf", &x, &y);
+		printf("x=");
+		scanf("%lf", &x);
+		printf("y=");
+		scanf("%lf", &y);
 
 		if (x > y) {
 			f = x / y;
@@ -98,7 +107,12 @@ void main()
 		где k есть меньшее из чисел x, y, z, а m и n есть среднее и большее из этих чисел. Предполагается, что значения параметров больше нуля */
 
 		double x, y, z, f;
-		scanf("%lf %lf %lf", &x, &y, &z);
+		printf("x=");
+		scanf("%lf", &x);
+		printf("y=");
+		scanf("%lf", &y);
+		printf("z=");
+		scanf("%lf", &z);
 
 		if (x < y && x < z) {
 			f = y*z / x;
@@ -111,12 +125,17 @@ void main()
 		}
 		printf("%lf\n", f);
 	}
-
 	else if (n == 6) {
 		/* 6. Напишите функцию int f(int a, int b, int c), которая возвращает наименьшее из значений a, b, c. */
 
 		int a, b, c, f;
-		scanf("%d %d %d", &a, &b, &c);
+		printf("a=");
+		scanf("%d", &a);
+		printf("b=");
+		scanf("%d", &b);
+		printf("c=");
+		scanf("%d", &c);
+	
 		if (a < b && a < c) {
 			f = a;
 		}
@@ -133,7 +152,12 @@ void main()
 		/* 7. Напишите функцию int f(int a, int b, int c), которая возвращает наибольшее из значений a, b, c. */
 
 		int a, b, c, f;
-		scanf("%d %d %d", &a, &b, &c);
+		printf("a=");
+		scanf("%d", &a);
+		printf("b=");
+		scanf("%d", &b);
+		printf("c=");
+		scanf("%d", &c);
 		if (a > b && a > c) {
 			f = a;
 		}
@@ -150,7 +174,12 @@ void main()
 		/* 8. Напишите функцию bool f(int x, int y, int z), которая возвращает true, если х^2+у^2= z^2, иначе возвращает false. */
 
 		int x, y, z;
-		scanf("%d %d %d", &x, &y, &z);
+		printf("x=");
+		scanf("%d", &x);
+		printf("y=");
+		scanf("%d", &y);
+		printf("z=");
+		scanf("%d", &z);
 		if (x*x + y*y == z*z) {
 			printf("true\n");
 		}
@@ -164,7 +193,10 @@ void main()
 		y делится нацело на x, иначе возвращает false. Предполагается, что значения параметров больше нуля. */
 
 		int x, y;
-		scanf("%d %d", &x, &y);
+		printf("x=");
+		scanf("%d", &x);
+		printf("y=");
+		scanf("%d", &y);
 		if (x%y == 0 || y%x == 0) {
 			printf("true\n");
 		}
@@ -179,7 +211,12 @@ void main()
 		иначе возвращает false. Предполагается, что значения параметров больше нуля */
 
 		int x, y, z;
-		scanf("%d %d %d", &x, &y, &z);
+		printf("x=");
+		scanf("%d", &x);
+		printf("y=");
+		scanf("%d", &y);
+		printf("z=");
+		scanf("%d", &z);
 		if (x>y && x>z && x<(y+z)) {
 			printf("true\n");
 		}
